@@ -27,8 +27,23 @@ src="https://www.facebook.com/tr?id=864423999785221&ev=PageView&noscript=1"
   * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
   body { background: #0a0e17; color: #fff; }
 
+  .ticker {
+    background: #111827; padding: 10px 0; overflow: hidden; white-space: nowrap;
+    border-bottom: 1px solid #1f2937; font-size: 13px; color: #22c55e;
+  }
+  .ticker span { display: inline-block; padding-left: 100%; animation: scroll 16s linear infinite; }
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+  .live-badge {
+    text-align: center; padding: 8px; background: #16a34a; font-size: 12px;
+    font-weight: 600; letter-spacing: 1px;
+  }
+
   .hero {
-    text-align: center; padding: 50px 20px 30px;
+    text-align: center; padding: 40px 20px 30px;
   }
   .avatar {
     width: 140px; height: 140px; border-radius: 50%; object-fit: cover;
@@ -74,36 +89,12 @@ src="https://www.facebook.com/tr?id=864423999785221&ev=PageView&noscript=1"
   .feature-card .emoji { font-size: 22px; }
   .feature-card p { font-size: 14px; color: #d1d5db; }
 
+  .disclaimer {
+    max-width: 500px; margin: 20px auto; padding: 18px 22px; background: #111827;
+    border-radius: 12px; font-size: 12px; color: #9ca3af; line-height: 1.7;
+  }
+  .disclaimer h4 { color: #22c55e; font-size: 14px; margin-bottom: 8px; }
+
   .final-cta { text-align: center; padding: 30px 20px 10px; }
 
-  footer { text-align: center; padding: 25px; color: #6b7280; font-size: 12px; }
-</style>
-</head>
-<body>
-
-  <div class="hero">
-    <img src="photo.jpg" alt="Arjun Singh" class="avatar">
-    <div class="badge-tag">✓ Freelance Services</div>
-    <h1>ARJUN SINGH</h1>
-    <p class="sub">📲 WhatsApp Call पर<br>Step-by-Step Guidance मिलेगी।<br>अभी Message करें</p>
-    <div class="arrow">👇👇👇</div>
-    <a class="cta-btn" href="https://wa.me/918302454401?text=HELLO_SIR%E2%9C%85" target="_blank">
-      💬 WHATSAPP NOW
-    </a>
-  </div>
-
-  <div class="features">
-    <div class="feature-card"><span class="emoji">📞</span><p>Personal WhatsApp call support</p></div>
-    <div class="feature-card"><span class="emoji">🚀</span><p>Step-by-step, beginner-friendly help</p></div>
-  </div>
-
-  <div class="final-cta">
-    <a class="cta-btn" href="https://wa.me/918302454401?text=HELLO_SIR%E2%9C%85" target="_blank">
-      💬 WHATSAPP NOW
-    </a>
-  </div>
-
-  <footer>© 2026 Arjun Singh</footer>
-
-</body>
-</html>
+  footer { text-align: center; padding: 25px; color: #6b7280;
