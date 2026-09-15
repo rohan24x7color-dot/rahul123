@@ -1,138 +1,412 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arjun Singh - Freelance Services</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Strategy Community | WhatsApp</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1297331705695778');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1297331705695778&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+        body {
+            background-color: #0b0f19;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 15px;
+            position: relative;
+            overflow-x: hidden;
+        }
 
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-  body { background: #0a0e17; color: #fff; }
+        /* Ambient Glowing Background Effect */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, rgba(37, 211, 102, 0.25) 0%, rgba(11, 15, 25, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+            animation: pulseGlow 4s infinite alternate ease-in-out;
+        }
 
-  .ticker {
-    background: #111827; padding: 10px 0; overflow: hidden; white-space: nowrap;
-    border-bottom: 1px solid #1f2937; font-size: 13px; color: #22c55e;
-  }
-  .ticker span { display: inline-block; padding-left: 100%; animation: scroll 16s linear infinite; }
-  @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
+        @keyframes pulseGlow {
+            0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.6; }
+            100% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+        }
 
-  .live-badge {
-    text-align: center; padding: 8px; background: #16a34a; font-size: 12px;
-    font-weight: 600; letter-spacing: 1px;
-  }
+        .container {
+            width: 100%;
+            max-width: 480px;
+            background: rgba(18, 26, 43, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            z-index: 1;
+            animation: fadeInUp 0.8s ease-out;
+        }
 
-  .hero {
-    text-align: center; padding: 40px 20px 30px;
-  }
-  .avatar {
-    width: 140px; height: 140px; border-radius: 50%; object-fit: cover;
-    margin: 0 auto 18px; border: 4px solid #22c55e; display: block;
-    box-shadow: 0 0 25px rgba(34,197,94,0.5);
-  }
-  .badge-tag {
-    display: inline-block; background: #1f2937; color: #22c55e; padding: 5px 16px;
-    border-radius: 20px; font-size: 13px; margin-bottom: 14px; font-weight: 600;
-  }
-  .hero h1 {
-    font-size: 30px; margin-bottom: 22px; letter-spacing: 1px;
-  }
-  .hero .sub {
-    font-size: 22px; font-weight: 800; color: #ffffff; margin: 18px auto 28px;
-    line-height: 1.8; max-width: 420px;
-  }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-  .cta-btn {
-    display: inline-block; background: #25D366; color: #fff; padding: 26px 56px;
-    border-radius: 16px; text-decoration: none; font-weight: 800; font-size: 24px;
-    box-shadow: 0 0 0 0 rgba(37,211,102,0.7); margin: 10px 0;
-    transition: transform 0.2s ease;
-    animation: pulse 1.6s infinite;
-  }
-  .cta-btn:hover {
-    transform: scale(1.07);
-  }
-  @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
-    70% { box-shadow: 0 0 0 22px rgba(37,211,102,0); }
-    100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
-  }
-  .arrow { font-size: 26px; margin: 14px 0; }
+        /* Live Badge */
+        .live-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(37, 211, 102, 0.12);
+            border: 1px solid rgba(37, 211, 102, 0.3);
+            color: #25D366;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
 
-  .features {
-    padding: 30px 20px; max-width: 500px; margin: 0 auto;
-  }
-  .feature-card {
-    background: #111827; border: 1px solid #1f2937; border-radius: 12px;
-    padding: 16px 18px; margin-bottom: 12px; display: flex; align-items: center; gap: 14px;
-  }
-  .feature-card .emoji { font-size: 22px; }
-  .feature-card p { font-size: 14px; color: #d1d5db; }
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #25D366;
+            border-radius: 50%;
+            box-shadow: 0 0 0 rgba(37, 211, 102, 0.7);
+            animation: pulseDot 1.5s infinite;
+        }
 
-  .disclaimer {
-    max-width: 500px; margin: 20px auto; padding: 18px 22px; background: #111827;
-    border-radius: 12px; font-size: 12px; color: #9ca3af; line-height: 1.7;
-  }
-  .disclaimer h4 { color: #22c55e; font-size: 14px; margin-bottom: 8px; }
+        @keyframes pulseDot {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 8px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
 
-  .final-cta { text-align: center; padding: 30px 20px 10px; }
+        /* Profile / Logo Circle */
+        .profile-container {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            padding: 3px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+            transition: transform 0.4s ease;
+        }
 
-  footer { text-align: center; padding: 25px; color: #6b7280; font-size: 12px; }
-</style>
+        .profile-container:hover {
+            transform: scale(1.08) rotate(3deg);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #111827;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px;
+            color: #25D366;
+            overflow: hidden;
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Main Heading */
+        .title {
+            font-size: 24px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            font-size: 13px;
+            color: #9ca3af;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        /* Stats Section */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 14px;
+            padding: 12px 8px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background: rgba(37, 211, 102, 0.08);
+            border-color: rgba(37, 211, 102, 0.3);
+            transform: translateY(-4px);
+        }
+
+        .stat-number {
+            font-size: 15px;
+            font-weight: 700;
+            color: #25D366;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 10px;
+            color: #9ca3af;
+            font-weight: 600;
+            margin-top: 2px;
+            display: block;
+            text-transform: uppercase;
+        }
+
+        /* Highlights Card */
+        .highlights-box {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px dashed rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 15px;
+            margin-bottom: 25px;
+            font-size: 13px;
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+
+        .highlights-title {
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        /* Pulsing WhatsApp CTA Button */
+        .cta-btn-wrapper {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .cta-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 16px 20px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 800;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Continuous Button Pulse Wave */
+        .cta-btn-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 50px;
+            background: rgba(37, 211, 102, 0.6);
+            z-index: -1;
+            animation: btnPulse 2s infinite;
+        }
+
+        @keyframes btnPulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1.08, 1.25);
+                opacity: 0;
+            }
+        }
+
+        /* Button Hover & Light Sheen Effect */
+        .cta-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+            transform: rotate(30deg);
+            animation: shineEffect 3s infinite;
+        }
+
+        @keyframes shineEffect {
+            0% { transform: translateX(-100%) rotate(30deg); }
+            20% { transform: translateX(100%) rotate(30deg); }
+            100% { transform: translateX(100%) rotate(30deg); }
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.6);
+            background: linear-gradient(135deg, #28e06f 0%, #149c8c 100%);
+        }
+
+        .cta-btn:active {
+            transform: translateY(1px) scale(0.99);
+        }
+
+        .cta-btn i {
+            font-size: 24px;
+        }
+
+        /* Notice / Countdown */
+        .redirect-notice {
+            font-size: 11px;
+            color: #6b7280;
+            margin-bottom: 15px;
+        }
+
+        /* Disclaimer Footer */
+        .footer-text {
+            font-size: 10px;
+            color: #4b5563;
+            line-height: 1.4;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 15px;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 400px) {
+            .container {
+                padding: 24px 15px;
+            }
+            .title {
+                font-size: 21px;
+            }
+            .cta-btn {
+                font-size: 16px;
+                padding: 14px 16px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <div class="ticker"><span>💼 Freelancing Guidance &nbsp;&nbsp;&nbsp; 📞 WhatsApp Call Support &nbsp;&nbsp;&nbsp; 🚀 Beginner Friendly &nbsp;&nbsp;&nbsp; 📲 Step-by-Step Help</span></div>
-  <div class="live-badge">🟢 AVAILABLE FOR GUIDANCE</div>
+    <div class="container">
+        <!-- Live Status Badge -->
+        <div class="live-badge">
+            <span class="pulse-dot"></span>
+            LIVE COMMUNITY
+        </div>
 
-  <div class="hero">
-    <img src="photo.jpg" alt="Arjun Singh" class="avatar">
-    <div class="badge-tag">✓ Freelance Services</div>
-    <h1>ARJUN SINGH</h1>
-    <p class="sub">📲 WhatsApp Call पर<br>Step-by-Step Guidance मिलेगी।<br>अभी Message करें</p>
-    <div class="arrow">👇👇👇</div>
-    <a class="cta-btn" href="https://wa.me/917426098543?text=HELLO_SIR" target="_blank">
-      💬 WHATSAPP NOW
-    </a>
-  </div>
+        <!-- Profile Logo -->
+        <div class="profile-container">
+            <div class="profile-img">
+                <!-- Change image or use Icon -->
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+        </div>
 
-  <div class="features">
-    <div class="feature-card"><span class="emoji">📞</span><p>Personal WhatsApp call support</p></div>
-    <div class="feature-card"><span class="emoji">🚀</span><p>Step-by-step, beginner-friendly help</p></div>
-  </div>
+        <!-- Main Title & Subtitle -->
+        <h1 class="title">VIP STRATEGY</h1>
+        <p class="subtitle">COMMUNITY & STRATEGY UPDATES</p>
 
-  <div class="disclaimer">
-    <h4>⚠ Disclaimer</h4>
-    Ye guidance sirf educational aur informational purpose ke liye di jaati hai. Freelancing me success individual effort, skill aur market conditions par depend karta hai, iski koi guarantee nahi hai.
-  </div>
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Access</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">15K+</span>
+                <span class="stat-label">Members</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">DAILY</span>
+                <span class="stat-label">Updates</span>
+            </div>
+        </div>
 
-  <div class="final-cta">
-    <a class="cta-btn" href="https://wa.me/917426098543?text=HELLO_SIR" target="_blank">
-      💬 WHATSAPP NOW
-    </a>
-  </div>
+        <!-- Highlights Card -->
+        <div class="highlights-box">
+            <div class="highlights-title">
+                <span>🔥</span> Premium Community Access <span>🔥</span>
+            </div>
+            <p>Market Trends • Strategy Discussions • Community Insights • Daily Updates</p>
+        </div>
 
-  <footer>© 2026 Arjun Singh</footer>
+        <!-- WhatsApp CTA Button -->
+        <div class="cta-btn-wrapper">
+            <!-- REPLACE THE LINK BELOW WITH YOUR WHATSAPP GROUP OR NUMBER LINK -->
+            <a href="https://chat.whatsapp.com/YOUR_WHATSAPP_GROUP_LINK" class="cta-btn" id="whatsappBtn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>JOIN WHATSAPP</span>
+            </a>
+        </div>
+
+        <!-- Redirect Notice -->
+        <p class="redirect-notice">Click above to join our official WhatsApp group</p>
+
+        <!-- Disclaimer Footer -->
+        <div class="footer-text">
+            For educational & community purposes only.<br>
+            No guaranteed results or financial promises.
+        </div>
+    </div>
 
 </body>
 </html>
