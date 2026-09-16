@@ -37,61 +37,89 @@
         }
 
         body {
-            background-color: #0b0f19;
+            background-color: #050811;
             color: #ffffff;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px 15px;
+            padding: 20px 10px;
             position: relative;
             overflow-x: hidden;
         }
 
-        /* Ambient Glowing Background Effect */
+        /* Ambient Background Glow */
         body::before {
             content: '';
             position: absolute;
-            top: 20%;
+            top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 320px;
-            height: 320px;
-            background: radial-gradient(circle, rgba(37, 211, 102, 0.25) 0%, rgba(11, 15, 25, 0) 70%);
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(37, 211, 102, 0.2) 0%, rgba(11, 15, 25, 0) 70%);
             z-index: 0;
             pointer-events: none;
             animation: pulseGlow 4s infinite alternate ease-in-out;
         }
 
         @keyframes pulseGlow {
-            0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.6; }
-            100% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+            0% { transform: translate(-50%, -50%) scale(0.85); opacity: 0.5; }
+            100% { transform: translate(-50%, -50%) scale(1.15); opacity: 0.9; }
         }
 
+        /* Phone Frame Wrapper */
+        .phone-frame {
+            position: relative;
+            width: 100%;
+            max-width: 390px;
+            background: #0f172a;
+            border: 10px solid #1e293b;
+            border-radius: 48px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(37, 211, 102, 0.15);
+            z-index: 1;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        /* Dynamic Island / Speaker Notch */
+        .phone-notch {
+            width: 110px;
+            height: 24px;
+            background: #020617;
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 20px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 12px;
+        }
+
+        .phone-notch::before {
+            content: '';
+            width: 10px;
+            height: 100%;
+            background: #1e293b;
+            border-radius: 50%;
+            display: block;
+            width: 10px;
+            height: 10px;
+            background: #0f172a;
+            border: 2px solid #1e293b;
+        }
+
+        /* Inner Content Area */
         .container {
             width: 100%;
-            max-width: 480px;
-            background: rgba(18, 26, 43, 0.75);
+            background: rgba(18, 26, 43, 0.92);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            padding: 30px 20px;
+            padding: 55px 20px 30px;
             text-align: center;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-            z-index: 1;
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         /* Live Badge */
@@ -104,10 +132,10 @@
             color: #25D366;
             padding: 6px 16px;
             border-radius: 50px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
             letter-spacing: 1px;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             text-transform: uppercase;
         }
 
@@ -121,22 +149,16 @@
         }
 
         @keyframes pulseDot {
-            0% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 8px rgba(37, 211, 102, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-            }
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 8px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
         /* Profile / Logo Circle */
         .profile-container {
-            width: 90px;
-            height: 90px;
-            margin: 0 auto 18px;
+            width: 85px;
+            height: 85px;
+            margin: 0 auto 16px;
             border-radius: 50%;
             padding: 3px;
             background: linear-gradient(135deg, #25D366, #128C7E);
@@ -145,7 +167,7 @@
         }
 
         .profile-container:hover {
-            transform: scale(1.08) rotate(3deg);
+            transform: scale(1.06) rotate(3deg);
         }
 
         .profile-img {
@@ -156,32 +178,26 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 38px;
+            font-size: 34px;
             color: #25D366;
             overflow: hidden;
         }
 
-        .profile-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
         /* Main Heading */
         .title {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 800;
             color: #ffffff;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             letter-spacing: 0.5px;
         }
 
         .subtitle {
-            font-size: 13px;
+            font-size: 11px;
             color: #9ca3af;
             font-weight: 600;
             letter-spacing: 1.5px;
-            margin-bottom: 25px;
+            margin-bottom: 22px;
             text-transform: uppercase;
         }
 
@@ -189,33 +205,33 @@
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-bottom: 25px;
+            gap: 8px;
+            margin-bottom: 22px;
         }
 
         .stat-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.07);
-            border-radius: 14px;
-            padding: 12px 8px;
+            border-radius: 12px;
+            padding: 10px 6px;
             transition: all 0.3s ease;
         }
 
         .stat-card:hover {
             background: rgba(37, 211, 102, 0.08);
             border-color: rgba(37, 211, 102, 0.3);
-            transform: translateY(-4px);
+            transform: translateY(-3px);
         }
 
         .stat-number {
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 700;
             color: #25D366;
             display: block;
         }
 
         .stat-label {
-            font-size: 10px;
+            font-size: 9px;
             color: #9ca3af;
             font-weight: 600;
             margin-top: 2px;
@@ -227,18 +243,18 @@
         .highlights-box {
             background: rgba(255, 255, 255, 0.02);
             border: 1px dashed rgba(255, 255, 255, 0.12);
-            border-radius: 16px;
-            padding: 15px;
-            margin-bottom: 25px;
-            font-size: 13px;
+            border-radius: 14px;
+            padding: 14px 10px;
+            margin-bottom: 22px;
+            font-size: 12px;
             color: #d1d5db;
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
         .highlights-title {
             color: #ffffff;
             font-weight: 700;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -248,23 +264,23 @@
         /* Pulsing WhatsApp CTA Button */
         .cta-btn-wrapper {
             position: relative;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
         .cta-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
             width: 100%;
-            padding: 16px 20px;
+            padding: 15px 18px;
             background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
             color: #ffffff;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 800;
             border-radius: 50px;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -274,7 +290,7 @@
             letter-spacing: 0.5px;
         }
 
-        /* Continuous Button Pulse Wave */
+        /* Pulse Wave */
         .cta-btn-wrapper::before {
             content: '';
             position: absolute;
@@ -289,17 +305,11 @@
         }
 
         @keyframes btnPulse {
-            0% {
-                transform: scale(1);
-                opacity: 0.8;
-            }
-            100% {
-                transform: scale(1.08, 1.25);
-                opacity: 0;
-            }
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(1.06, 1.2); opacity: 0; }
         }
 
-        /* Button Hover & Light Sheen Effect */
+        /* Sheen Effect */
         .cta-btn::after {
             content: '';
             position: absolute;
@@ -319,109 +329,120 @@
         }
 
         .cta-btn:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.6);
+            transform: translateY(-2px) scale(1.01);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
             background: linear-gradient(135deg, #28e06f 0%, #149c8c 100%);
         }
 
-        .cta-btn:active {
-            transform: translateY(1px) scale(0.99);
-        }
-
         .cta-btn i {
-            font-size: 24px;
+            font-size: 22px;
         }
 
-        /* Notice / Countdown */
+        /* Redirect Notice */
         .redirect-notice {
             font-size: 11px;
             color: #6b7280;
-            margin-bottom: 15px;
+            margin-bottom: 14px;
         }
 
-        /* Disclaimer Footer */
+        /* Footer */
         .footer-text {
             font-size: 10px;
             color: #4b5563;
             line-height: 1.4;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
-            padding-top: 15px;
+            padding-top: 12px;
         }
 
-        /* Mobile Optimization */
-        @media (max-width: 400px) {
+        /* Native Mobile Viewport Adjustment */
+        @media (max-width: 480px) {
+            body {
+                padding: 0;
+                background-color: #0b0f19;
+            }
+            .phone-frame {
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+                max-width: 100%;
+                min-height: 100vh;
+            }
+            .phone-notch {
+                display: none;
+            }
             .container {
-                padding: 24px 15px;
-            }
-            .title {
-                font-size: 21px;
-            }
-            .cta-btn {
-                font-size: 16px;
-                padding: 14px 16px;
+                padding-top: 35px;
+                min-height: 100vh;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Live Status Badge -->
-        <div class="live-badge">
-            <span class="pulse-dot"></span>
-            LIVE COMMUNITY
-        </div>
+    <!-- Phone Frame -->
+    <div class="phone-frame">
+        <!-- Top Camera Notch / Dynamic Island -->
+        <div class="phone-notch"></div>
 
-        <!-- Profile Logo -->
-        <div class="profile-container">
-            <div class="profile-img">
-                <i class="fa-solid fa-chart-line"></i>
+        <!-- Phone Screen Container -->
+        <div class="container">
+            <!-- Live Status Badge -->
+            <div class="live-badge">
+                <span class="pulse-dot"></span>
+                LIVE COMMUNITY
             </div>
-        </div>
 
-        <!-- Main Title & Subtitle -->
-        <h1 class="title">VIP STRATEGY</h1>
-        <p class="subtitle">COMMUNITY & STRATEGY UPDATES</p>
-
-        <!-- Stats Grid -->
-        <div class="stats-grid">
-            <div class="stat-card">
-                <span class="stat-number">24/7</span>
-                <span class="stat-label">Access</span>
+            <!-- Profile Logo -->
+            <div class="profile-container">
+                <div class="profile-img">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
             </div>
-            <div class="stat-card">
-                <span class="stat-number">15K+</span>
-                <span class="stat-label">Members</span>
+
+            <!-- Main Title & Subtitle -->
+            <h1 class="title">VIP STRATEGY</h1>
+            <p class="subtitle">COMMUNITY & STRATEGY UPDATES</p>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Access</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">15K+</span>
+                    <span class="stat-label">Members</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">DAILY</span>
+                    <span class="stat-label">Updates</span>
+                </div>
             </div>
-            <div class="stat-card">
-                <span class="stat-number">DAILY</span>
-                <span class="stat-label">Updates</span>
+
+            <!-- Highlights Card -->
+            <div class="highlights-box">
+                <div class="highlights-title">
+                    <span>🔥</span> Premium Community Access <span>🔥</span>
+                </div>
+                <p>Market Trends • Strategy Discussions • Community Insights • Daily Updates</p>
             </div>
-        </div>
 
-        <!-- Highlights Card -->
-        <div class="highlights-box">
-            <div class="highlights-title">
-                <span>🔥</span> Premium Community Access <span>🔥</span>
+            <!-- WhatsApp CTA Button -->
+            <div class="cta-btn-wrapper">
+                <a href="https://wa.me/917426098543?text=HELLO_SIR_✅" class="cta-btn" id="whatsappBtn" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>JOIN WHATSAPP</span>
+                </a>
             </div>
-            <p>Market Trends • Strategy Discussions • Community Insights • Daily Updates</p>
-        </div>
 
-        <!-- WhatsApp CTA Button -->
-        <div class="cta-btn-wrapper">
-            <a href="https://wa.me/917426098543?text=HELLO_SIR_✅" class="cta-btn" id="whatsappBtn" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i>
-                <span>JOIN WHATSAPP</span>
-            </a>
-        </div>
+            <!-- Redirect Notice -->
+            <p class="redirect-notice">Click above to join our official WhatsApp group</p>
 
-        <!-- Redirect Notice -->
-        <p class="redirect-notice">Click above to join our official WhatsApp group</p>
-
-        <!-- Disclaimer Footer -->
-        <div class="footer-text">
-            For educational & community purposes only.<br>
-            No guaranteed results or financial promises.
+            <!-- Disclaimer Footer -->
+            <div class="footer-text">
+                For educational & community purposes only.<br>
+                No guaranteed results or financial promises.
+            </div>
         </div>
     </div>
 
