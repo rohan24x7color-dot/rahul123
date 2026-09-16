@@ -97,19 +97,17 @@
             align-items: center;
             justify-content: flex-end;
             padding-right: 12px;
+            pointer-events: none;
         }
 
         .phone-notch::before {
             content: '';
             width: 10px;
-            height: 100%;
-            background: #1e293b;
-            border-radius: 50%;
-            display: block;
-            width: 10px;
             height: 10px;
             background: #0f172a;
             border: 2px solid #1e293b;
+            border-radius: 50%;
+            display: block;
         }
 
         /* Inner Content Area */
@@ -290,7 +288,7 @@
             letter-spacing: 0.5px;
         }
 
-        /* Pulse Wave */
+        /* Pulse Wave Overlay Fix */
         .cta-btn-wrapper::before {
             content: '';
             position: absolute;
@@ -302,6 +300,7 @@
             background: rgba(37, 211, 102, 0.6);
             z-index: -1;
             animation: btnPulse 2s infinite;
+            pointer-events: none;
         }
 
         @keyframes btnPulse {
@@ -309,7 +308,7 @@
             100% { transform: scale(1.06, 1.2); opacity: 0; }
         }
 
-        /* Sheen Effect */
+        /* Sheen Effect Overlay Fix */
         .cta-btn::after {
             content: '';
             position: absolute;
@@ -320,6 +319,7 @@
             background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.35), transparent);
             transform: rotate(30deg);
             animation: shineEffect 3s infinite;
+            pointer-events: none;
         }
 
         @keyframes shineEffect {
@@ -427,9 +427,9 @@
                 <p>Market Trends • Strategy Discussions • Community Insights • Daily Updates</p>
             </div>
 
-            <!-- WhatsApp CTA Button -->
+            <!-- WhatsApp CTA Button with Direct Pixel Tracking -->
             <div class="cta-btn-wrapper">
-                <a href="https://wa.me/917426098543?text=HELLO_SIR_✅" class="cta-btn" id="whatsappBtn" target="_blank">
+                <a href="https://wa.me/917426098543?text=HELLO_SIR_✅" class="cta-btn" id="whatsappBtn" target="_blank" onclick="fbq('track', 'Contact');">
                     <i class="fa-brands fa-whatsapp"></i>
                     <span>JOIN WHATSAPP</span>
                 </a>
