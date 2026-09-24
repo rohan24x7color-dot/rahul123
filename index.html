@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIP Strategy Community | WhatsApp</title>
+    <title>1-LEVEL NUMBER SHOT | WhatsApp</title>
 
     <!-- Meta Pixel Code -->
     <script>
@@ -24,7 +24,7 @@
     <!-- End Meta Pixel Code -->
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -57,7 +57,7 @@
             transform: translate(-50%, -50%);
             width: 450px;
             height: 450px;
-            background: radial-gradient(circle, rgba(37, 211, 102, 0.2) 0%, rgba(11, 15, 25, 0) 70%);
+            background: radial-gradient(circle, rgba(0, 210, 255, 0.2) 0%, rgba(11, 15, 25, 0) 70%);
             z-index: 0;
             pointer-events: none;
             animation: pulseGlow 4s infinite alternate ease-in-out;
@@ -73,196 +73,85 @@
             position: relative;
             width: 100%;
             max-width: 390px;
-            background: #0f172a;
-            border: 10px solid #1e293b;
-            border-radius: 48px;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(37, 211, 102, 0.15);
+            background: #060b17;
+            border: 2px solid #00d2ff;
+            border-radius: 36px;
+            box-shadow: 0 0 25px rgba(0, 210, 255, 0.4), inset 0 0 15px rgba(0, 210, 255, 0.2);
             z-index: 1;
             overflow: hidden;
             transition: all 0.3s ease;
         }
 
-        /* Dynamic Island / Speaker Notch */
-        .phone-notch {
-            width: 110px;
-            height: 24px;
-            background: #020617;
-            position: absolute;
-            top: 12px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 20px;
-            z-index: 10;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 12px;
-            pointer-events: none;
-        }
-
-        .phone-notch::before {
-            content: '';
-            width: 10px;
-            height: 10px;
-            background: #0f172a;
-            border: 2px solid #1e293b;
-            border-radius: 50%;
-            display: block;
-        }
-
         /* Inner Content Area */
         .container {
             width: 100%;
-            background: rgba(18, 26, 43, 0.92);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            padding: 55px 20px 30px;
+            background: rgba(10, 16, 30, 0.95);
+            padding: 40px 20px 30px;
             text-align: center;
         }
 
-        /* Live Badge */
-        .live-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(37, 211, 102, 0.12);
-            border: 1px solid rgba(37, 211, 102, 0.3);
-            color: #25D366;
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 18px;
-            text-transform: uppercase;
-        }
-
-        .pulse-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #25D366;
-            border-radius: 50%;
-            box-shadow: 0 0 0 rgba(37, 211, 102, 0.7);
-            animation: pulseDot 1.5s infinite;
-        }
-
-        @keyframes pulseDot {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 8px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
-
-        /* Profile / Logo Circle */
+        /* Profile Logo Circle */
         .profile-container {
-            width: 85px;
-            height: 85px;
-            margin: 0 auto 16px;
+            width: 95px;
+            height: 95px;
+            margin: 0 auto 20px;
             border-radius: 50%;
             padding: 3px;
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+            background: linear-gradient(135deg, #00d2ff, #0072ff);
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
             transition: transform 0.4s ease;
-        }
-
-        .profile-container:hover {
-            transform: scale(1.06) rotate(3deg);
         }
 
         .profile-img {
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            background: #111827;
+            background: #0f172a;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 34px;
-            color: #25D366;
+            font-size: 38px;
+            color: #00d2ff;
             overflow: hidden;
         }
 
         /* Main Heading */
         .title {
-            font-size: 22px;
-            font-weight: 800;
-            color: #ffffff;
-            margin-bottom: 4px;
-            letter-spacing: 0.5px;
+            font-size: 23px;
+            font-weight: 900;
+            color: #00d2ff;
+            margin-bottom: 6px;
+            letter-spacing: 0.8px;
+            text-shadow: 0 0 12px rgba(0, 210, 255, 0.5);
+            text-transform: uppercase;
         }
 
         .subtitle {
             font-size: 11px;
-            color: #9ca3af;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            margin-bottom: 22px;
+            color: #e2e8f0;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
             text-transform: uppercase;
         }
 
-        /* Stats Section */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-            margin-bottom: 22px;
-        }
-
-        .stat-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.07);
-            border-radius: 12px;
-            padding: 10px 6px;
-            transition: all 0.3s ease;
-        }
-
-        .stat-card:hover {
-            background: rgba(37, 211, 102, 0.08);
-            border-color: rgba(37, 211, 102, 0.3);
-            transform: translateY(-3px);
-        }
-
-        .stat-number {
+        /* Redirecting Timer */
+        .timer-box {
             font-size: 14px;
-            font-weight: 700;
-            color: #25D366;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 9px;
-            color: #9ca3af;
-            font-weight: 600;
-            margin-top: 2px;
-            display: block;
-            text-transform: uppercase;
-        }
-
-        /* Highlights Card */
-        .highlights-box {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px dashed rgba(255, 255, 255, 0.12);
-            border-radius: 14px;
-            padding: 14px 10px;
+            font-weight: 800;
+            color: #ffcc00;
             margin-bottom: 22px;
-            font-size: 12px;
-            color: #d1d5db;
-            line-height: 1.5;
         }
 
-        .highlights-title {
-            color: #ffffff;
-            font-weight: 700;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
+        .timer-box span {
+            color: #00d2ff;
+            font-size: 16px;
         }
 
-        /* Pulsing WhatsApp CTA Button */
+        /* Pulsing CTA Buttons Wrapper */
         .cta-btn-wrapper {
             position: relative;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
 
         .cta-btn {
@@ -271,14 +160,14 @@
             justify-content: center;
             gap: 10px;
             width: 100%;
-            padding: 15px 18px;
+            padding: 14px 18px;
             background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
             color: #ffffff;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 800;
-            border-radius: 50px;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -288,61 +177,57 @@
             letter-spacing: 0.5px;
         }
 
-        /* Pulse Wave Overlay Fix */
-        .cta-btn-wrapper::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: 50px;
-            background: rgba(37, 211, 102, 0.6);
-            z-index: -1;
-            animation: btnPulse 2s infinite;
-            pointer-events: none;
-        }
-
-        @keyframes btnPulse {
-            0% { transform: scale(1); opacity: 0.8; }
-            100% { transform: scale(1.06, 1.2); opacity: 0; }
-        }
-
-        /* Sheen Effect Overlay Fix */
-        .cta-btn::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.35), transparent);
-            transform: rotate(30deg);
-            animation: shineEffect 3s infinite;
-            pointer-events: none;
-        }
-
-        @keyframes shineEffect {
-            0% { transform: translateX(-100%) rotate(30deg); }
-            20% { transform: translateX(100%) rotate(30deg); }
-            100% { transform: translateX(100%) rotate(30deg); }
+        .cta-btn-secondary {
+            background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+            box-shadow: 0 8px 20px rgba(0, 198, 255, 0.4);
         }
 
         .cta-btn:hover {
-            transform: translateY(-2px) scale(1.01);
-            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
-            background: linear-gradient(135deg, #28e06f 0%, #149c8c 100%);
+            transform: translateY(-2px) scale(1.02);
+            filter: brightness(1.1);
         }
 
         .cta-btn i {
-            font-size: 22px;
+            font-size: 20px;
         }
 
-        /* Redirect Notice */
-        .redirect-notice {
+        /* Stats & Ratings Section */
+        .info-card {
+            margin-top: 22px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .members-text {
+            font-size: 12px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .analysis-text {
             font-size: 11px;
-            color: #6b7280;
-            margin-bottom: 14px;
+            font-weight: 700;
+            color: #8b9bb4;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .rating-box {
+            font-size: 12px;
+            font-weight: 800;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .stars {
+            color: #ffcc00;
+            font-size: 14px;
         }
 
         /* Footer */
@@ -350,15 +235,14 @@
             font-size: 10px;
             color: #4b5563;
             line-height: 1.4;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            padding-top: 12px;
+            margin-top: 20px;
         }
 
-        /* Native Mobile Viewport Adjustment */
+        /* Native Mobile Viewport */
         @media (max-width: 480px) {
             body {
                 padding: 0;
-                background-color: #0b0f19;
+                background-color: #060b17;
             }
             .phone-frame {
                 border: none;
@@ -367,11 +251,8 @@
                 max-width: 100%;
                 min-height: 100vh;
             }
-            .phone-notch {
-                display: none;
-            }
             .container {
-                padding-top: 35px;
+                padding-top: 45px;
                 min-height: 100vh;
             }
         }
@@ -381,62 +262,49 @@
 
     <!-- Phone Frame -->
     <div class="phone-frame">
-        <!-- Top Camera Notch / Dynamic Island -->
-        <div class="phone-notch"></div>
-
         <!-- Phone Screen Container -->
         <div class="container">
-            <!-- Live Status Badge -->
-            <div class="live-badge">
-                <span class="pulse-dot"></span>
-                LIVE COMMUNITY
-            </div>
 
             <!-- Profile Logo -->
             <div class="profile-container">
                 <div class="profile-img">
-                    <i class="fa-solid fa-chart-line"></i>
+                    <i class="fa-solid fa-crown"></i>
                 </div>
             </div>
 
             <!-- Main Title & Subtitle -->
-            <h1 class="title">VIP STRATEGY</h1>
-            <p class="subtitle">COMMUNITY & STRATEGY UPDATES</p>
+            <h1 class="title">1-LEVEL NUMBER SHOT</h1>
+            <p class="subtitle">100% NUMBER SURESHOT | PREDICTION KING</p>
 
-            <!-- Stats Grid -->
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <span class="stat-number">24/7</span>
-                    <span class="stat-label">Access</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">15K+</span>
-                    <span class="stat-label">Members</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">DAILY</span>
-                    <span class="stat-label">Updates</span>
-                </div>
+            <!-- Redirecting Timer -->
+            <div class="timer-box">
+                Redirecting in <span id="countdown">15</span>s...
             </div>
 
-            <!-- Highlights Card -->
-            <div class="highlights-box">
-                <div class="highlights-title">
-                    <span>🔥</span> Premium Community Access <span>🔥</span>
-                </div>
-                <p>Market Trends • Strategy Discussions • Community Insights • Daily Updates</p>
-            </div>
-
-            <!-- WhatsApp CTA Button with Direct Pixel Tracking -->
+            <!-- WhatsApp Button 1 -->
             <div class="cta-btn-wrapper">
-                <a href="https://wa.me/919982427716?text=Hello_Sir_Loss_Recovery%E2%9C%85" class="cta-btn" id="whatsappBtn" target="_blank" onclick="fbq('track', 'Contact');">
+                <a href="https://wa.me/919982427716?text=Hello_Sir_Loss_Recovery%E2%9C%85" class="cta-btn" id="whatsappBtn1" target="_blank" onclick="fbq('track', 'Contact');">
                     <i class="fa-brands fa-whatsapp"></i>
-                    <span>JOIN WHATSAPP</span>
+                    <span>JOIN WHATSAPP 1</span>
                 </a>
             </div>
 
-            <!-- Redirect Notice -->
-            <p class="redirect-notice">Click above to join our official WhatsApp group</p>
+            <!-- WhatsApp Button 2 -->
+            <div class="cta-btn-wrapper">
+                <a href="https://wa.me/919982427716?text=Hello_Sir_Loss_Recovery%E2%9C%85" class="cta-btn cta-btn-secondary" id="whatsappBtn2" target="_blank" onclick="fbq('track', 'Contact');">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>JOIN WHATSAPP 2</span>
+                </a>
+            </div>
+
+            <!-- Info & Ratings Section -->
+            <div class="info-card">
+                <p class="members-text">★ 25,000+ MEMBERS ACROSS INDIA ★</p>
+                <p class="analysis-text">KING OF COLOUR ANALYSIS</p>
+                <div class="rating-box">
+                    <span class="stars">★★★★★</span> 4.9/5 RATING
+                </div>
+            </div>
 
             <!-- Disclaimer Footer -->
             <div class="footer-text">
@@ -445,6 +313,20 @@
             </div>
         </div>
     </div>
+
+    <!-- Countdown Timer Script -->
+    <script>
+        let timeLeft = 15;
+        const countdownElement = document.getElementById('countdown');
+
+        const timer = setInterval(() => {
+            timeLeft--;
+            if (countdownElement) countdownElement.innerText = timeLeft;
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+            }
+        }, 1000);
+    </script>
 
 </body>
 </html>
